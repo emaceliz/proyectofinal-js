@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../media/icons/favicon/site.webmanifest">
+    <!-- FIN FAVICON -->
+</head>
+<body>
+    <!-- INICIO HEADER -->
+    <header class="grid-header">
+        <!-- inicio menu INDEX -->
+        <nav class="NAVBAR">
+            <!-- LOGO -->
+            <div class="NAVBAR__LOGO">
+                <a href="../index.html">
+                    <img class="logo" src="../media/LogoMeanMachine.png" alt="Logo Mean Machine Web">
+                </a>
+            </div>
+            <!-- FIN LOGO -->
+
+            <!-- TOGGLE -->
+            <input type="checkbox" class="NAVBAR__CHECKBOX" id="NAVBAR__CHECKBOX">
+            <label for="NAVBAR__CHECKBOX" class="NAVBAR__TOGGLE">
+                <svg class="iconMenu"></svg>
+                <svg class="iconClose"></svg>
+            </label>
+            <!-- FIN TOGGLE -->
+
+            <!-- INICIO MENU -->
+            <ul class="menu">
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="../index.html">INICIO</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./noticias.html">NOTICIAS</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./reviews.html">REVIEWS</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./nosotros.html">NOSOTROS</a>
+                </li>
+                <li class="MENU__BOTON botonesMenu">
+                    <a href="./unitenos.html">UNÍTENOS</a>
+                </li>
+                <li class="botonesMenu">
+                    <a href="./tienda.html">TIENDA</a>
+                </li>
+                <li class="botonesMenu paginaActiva">
+                    <a href="./carrito.html" id="carritoDisplay">
+                        <img src="../media/icons/carrito.svg" alt="Ícono Carrito de Compras">
+                    </a>
+                </li>
+                <!-- <li class="searchBox">
+                    <input type="search" placeholder="Buscar">
+                </li> -->
+            </ul>
+        </nav>
+        <!-- FIN MENU -->
+    </header>
+    <!-- FIN HEADER -->
+
+    <!-- INICIO MAIN CARRITO -->
+    <main>
+        <table id="carrito">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>NOMBRE</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>SUBTOTAL</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="productosCarrito">
+
+            </tbody>
+            <tfoot class="carritoFooter">
+                <tr>
+                    <th colspan="5" class="buttons">
+                        <button id="btnVaciarCarrito" class="btnVaciarCarrito">Vaciar Carrito</button>
+                        <button id="btnPurchaseCart" class="btnComprarCarrito">Comprar</button>
+                    </th>
+                    <th id="precioTotal"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <!-- FIN MAIN CARRITO -->
+
+    <!-- INICIO FOOTER -->
+    <footer class="footerCarrito">
+        <!-- ACÁ Redes y contacto -->
+        <section class="CONTACTO">
+            <!-- Formulario de contacto -->
+            <form action="/" method="/" id="newsletterForm" enctype="application/x-www-form-urlencoded" name="formulario suscripción">
+                <h3 class="CONTACTO__H3">Enterate siempre antes que el resto</h3>
+                <h3 class="CONTACTO__H3">¡UNITE a nuestro newsletter!</h3>
+                <!-- Input Nombre -->
+                <div class="CONTACTO__FORM__INPUT">
+                    <input type="text" name="Nombre" placeholder="Ingresá tu nombre" id="newsletterName">
+                    <!-- Si hay un error en el nombre, lo muestro acá -->
+                    <div class="CONTACTO__FORM__ERROR" id="errorNewsletterName"></div>
+                </div>
+                
+                <!-- Input Email -->
+                <div class="CONTACTO__FORM__INPUT">
+                    <input type="email" name="Email" id="newsletterEmail" placeholder="Ingresá tu email">
+                    <!-- Si hay un error con el email, lo muestro acá -->
+                    <div class="CONTACTO__FORM__ERROR" id="errorNewsletterEmail"></div>
+                </div>
+                
+                <button class="CONTACTO__FORM__BOTON" type="submit">Suscribirse</button>
+            </form>
+            <!-- Acá muestro si el formulario se envió correctamente -->
+            <article class="CONTACTO__ENVIADO" id="resultForm">
+            </article>
+        </section>
+        <section class="REDES">
+            <!-- Links a Redes -->
+        </section>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- SCRIPTS JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="../js/main-EntregaFinal-DiBiase.js"></script> -->
+    <script src="../js/carrito-EntregaFinal-Celiz.js"></script>
+    <script src="../js/formulario-EntregaFinal-Celiz.js"></script>
+</body>
+</html>
